@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>(desktop) desktop pannelletto</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta charset="UTF-8"> 
+
+<link rel="stylesheet" href="include/w3.css">
+<link rel="stylesheet" href="include/w3-colors-2021.css">
+<link rel="stylesheet" href="include/w3-colors-2020.css">
+<script src="include/w3.js"></script>
+
+<script>
+const mtxA = [ 
+
+
+
+];
+//togli l'ultima virgola
+// ["","","",""]
+// ["","test","1000000000000","2025_01_01_00_00_00"]
+</script>
+
+
+<style>
+	html,
+	body {
+	width: 100%;
+	height: 100%;
+	background-color: #3F3F3F;
+	margin:0px;padding:0px; 
+
+	}
+
+    .title-btn {
+      padding: 0.35em 1.0em;
+      cursor: pointer;
+      vertical-align: bottom;
+      font-family: Webdings;
+      font-size: 11pt;
+    }
+
+    .title-btn_2 {
+      padding: 0.35em 1.0em;
+      cursor: pointer;
+      vertical-align: bottom;
+      font-family: Webdings;
+      font-size: 12pt;
+    }
+	
+    body .title-btn-restore {
+      display: none
+    }
+    
+    body.neutron-maximized .title-btn-restore {
+      display: block
+    }
+    
+    body.neutron-maximized .title-btn-maximize {
+      display: none
+    }
+
+    .title-btn:hover {
+      background: rgba(0, 0, 0, .2);
+    }
+
+    .title-btn-close:hover {
+      background: #dc3545;
+    }
+	
+	
+	
+  </style>
+</head>
+
+<body  class="" style="overflow:hidden; " onLoad="document.getElementById('elm_textarea').focus();">
+
+  <!-- Title Bar -->  
+    <div class="w3-bar w3-black">
+      <span class="w3-bar-item w3-button" onmousedown="neutron.DragTitleBar()">(desktop) quick pannello manipolazione testo</span>
+ 
+      <span class="w3-bar-item w3-button title-btn title-btn-close w3-right" onclick="neutron.Close()">r</span>
+	  <span class="w3-bar-item w3-button title-btn title-btn-maximize w3-right" onclick="neutron.Maximize()">1</span>
+	  <span class="w3-bar-item w3-button title-btn w3-right" onclick="neutron.Minimize()">0</span>	  
+	  
+    </div>  
+  <!-- End Title Bar -->
+
+
+
+
+
+
+
+
+<!--  testo e controlli -->
+<div class="w3-row" style="">
+
+	<div class="w3-col s9 ">
+		
+		<div id="" class="" style="margin:0px;padding:0px; background: #4F4F4F; width: 74vw ; "> 
+			<!--  barre -->
+
+<div class="w3-cell" style="margin:0px;padding:4px; ">
+<button type="button" class="w3-button w3-light-grey w3-round" style="margin:0px;padding:2px; width: 100% ; 					" onclick="ahk.btn_sostutisci_indicati(event, 'tab', '')">-tab</button><br>
+<button type="button" class="w3-button w3-light-grey w3-round" style="margin:0px;padding:2px; width: 100% ; margin-top: 0.5em; 	" onclick="ahk.btn_sostutisci_indicati(event, 'enter', '')">-accapo</button>			  
+</div>
+<div class="w3-cell" style="margin:0px;padding:2px; ">
+<button type="button" class="w3-button w3-light-grey w3-round" style="margin:0px;padding:2px; width: 100% ; 					" onclick="ahk.btn_sostutisci_indicati(event, 'space', '')">-space</button><br>
+<button type="button" class="w3-button w3-light-grey w3-round" style="margin:0px;padding:2px; width: 100% ; margin-top: 0.5em; 	" onclick="ahk.btn_sostutisci_indicati(event, 'virg', '')">-virgola</button>			  
+</div>
+
+<!--  separatore -->
+<div class="w3-cell" style="margin:0px;padding:2px; width: 3em;"><br></div>
+
+<div class="w3-cell" style="margin:0px;padding:2px; ">
+<button type="button" class="w3-button w3-light-grey w3-round" style="margin:0px;padding:2px; width: 100% ; 					" onclick="ahk.btn_sostutisci_indicati(event, 'sterl', 'tab')">sterl 2 tab</button><br>
+<button type="button" class="w3-button w3-light-grey w3-round" style="margin:0px;padding:2px; width: 100% ; margin-top: 0.5em; 	" onclick="ahk.btn_sostutisci_indicati(event, 'tab', 'sterl')">tab 2 sterl</button>			  
+</div>
+
+<div class="w3-cell" style="margin:0px;padding:2px; ">
+<button type="button" class="w3-button w3-light-grey w3-round" style="margin:0px;padding:2px; width: 100% ; 					" onclick="ahk.btn_sostutisci_indicati(event, 'esponente', 'tab')">^ to tab</button><br>
+<button type="button" class="w3-button w3-light-grey w3-round" style="margin:0px;padding:2px; width: 100% ; margin-top: 0.5em; 	" onclick="ahk.btn_sostutisci_indicati(event, 'tab', 'esponente')">tab 2 ^</button>			  
+</div>
+
+<div class="w3-cell" style="margin:0px;padding:2px; ">
+<button type="button" class="w3-button w3-light-grey w3-round" style="margin:0px;padding:2px; width: 100% ; 					" onclick="ahk.btn_sostutisci_indicati(event, 'virgola', 'tab')">virg to tab</button><br>
+<button type="button" class="w3-button w3-light-grey w3-round" style="margin:0px;padding:2px; width: 100% ; margin-top: 0.5em; 	" onclick="ahk.btn_sostutisci_indicati(event, 'tab', 'virgola')">tab 2 virg</button>			  
+</div>
+
+<!--  separatore -->
+<div class="w3-cell" style="margin:0px;padding:2px; width: 3em;"><br></div>
+
+
+<div class="w3-cell" style="margin:0px;padding:2px; ">
+<button type="button" class="w3-button w3-light-grey w3-round" style="margin:0px;padding:2px; width: 100% ; 					" onclick="ahk.btn_sostutisci_indicati(event, 'sterl', 'accapo')">sterl 2 accapo</button><br>
+<button type="button" class="w3-button w3-light-grey w3-round" style="margin:0px;padding:2px; width: 100% ; margin-top: 0.5em; 	" onclick="ahk.btn_sostutisci_indicati(event, 'accapo', 'sterl')">accapo 2 sterl</button>			  
+</div>
+
+<div class="w3-cell" style="margin:0px;padding:2px; ">
+<button type="button" class="w3-button w3-light-grey w3-round" style="margin:0px;padding:2px; width: 100% ; 					" onclick="ahk.btn_sostutisci_indicati(event, 'tab', 'accapo')">tab 2 accapo</button><br>
+<button type="button" class="w3-button w3-light-grey w3-round" style="margin:0px;padding:2px; width: 100% ; margin-top: 0.5em; 	" onclick="ahk.btn_sostutisci_indicati(event, 'accapo', 'tab')">accapo 2 tab</button>			  
+</div>
+
+<div class="w3-cell" style="margin:0px;padding:2px; ">
+<button type="button" class="w3-button w3-light-grey w3-round" style="margin:0px;padding:2px; width: 100% ; 					" onclick="ahk.btn_sostutisci_indicati(event, 'par', 'accapo')">par 2 accapo</button><br>
+<button type="button" class="w3-button w3-light-grey w3-round" style="margin:0px;padding:2px; width: 100% ; margin-top: 0.5em; 	" onclick="ahk.btn_sostutisci_indicati(event, 'accapo', 'par')">accapo 2 par</button>			  
+</div>
+
+
+<!--  separatore -->
+<div class="w3-cell" style="margin:0px;padding:2px; width: 3em;"><br></div>
+
+
+<div class="w3-cell " style="margin:0px;padding:2px; ">
+<button type="button" class="w3-button w3-light-grey w3-round" style="margin:0px;padding:2px; width: 100% ; 					" onclick="ahk.btn_sostutisci_indicati(event, 'virg_8221', 'virgolette')">virg 8221 to virg</button><br>
+<button type="button" class="w3-button w3-light-grey w3-round" style="margin:0px;padding:2px; width: 100% ; margin-top: 0.5em; 	" onclick="ahk.btn_sostutisci_indicati(event, 'virg_8220', 'virgolette')">virg 8220 to virg</button>			  
+</div>
+
+<div class="w3-cell " style="margin:0px;padding:2px; ">
+<button type="button" class="w3-button w3-light-grey w3-round" style="margin:0px;padding:2px; width: 100% ; 					" onclick="ahk.btn_sostutisci_indicati(event, 'apice_8217', 'apice')">apice 8217 to apice</button><br>
+<!--  
+<button type="button" class="w3-button w3-light-grey w3-round" style="margin:0px;padding:2px; width: 100% ; margin-top: 0.5em; 	" onclick="ahk.btn_sostutisci_indicati(event, '', '')"></button>			  
+ -->
+</div>
+
+
+<!--  separatore -->
+<div class="w3-cell" style="margin:0px;padding:2px; width: 3em;"><br></div>
+
+
+<div class="w3-cell " style="margin:0px;padding:2px; ">
+<button type="button" class="w3-button w3-dark-grey w3-round" style="margin:0px;padding:2px; width: 100% ;  	" onclick="ahk.btn_pannello_top_entita_html(event)">html</button><br>
+<input id="elm_entita" class="w3-border " style="width: 3em;  margin-top: 0.5em;" type="text" placeholder="">
+</div>
+
+<div class="w3-cell " style="margin:0px;padding:2px; ">
+<button type="button" class="w3-button w3-red w3-round" style="margin:0px;padding:2px; width: 100% ; 					" onclick="document.getElementById('elm_entita').value = ''; ">x</button><br>
+<button type="button" class="w3-button w3-light-grey w3-round" style="margin:0px;padding:2px; width: 100% ; margin-top: 0.5em; 	" onclick="ahk.btn_pannello_top_entita(event)">entità</button>			  
+</div>
+
+
+		</div>
+
+
+		<div id="" class="w3-container" style=" ">
+			<!--  memo -->
+			<div class="form-group" style="margin-top:0.8em;">
+			
+			  <textarea id="elm_textarea"  class="" autofocus 
+						style="font-size: 1.2em; padding:4px; width: 100% ; height: 78vh ; border:1px solid #888;
+								font-family: consolas; background-color: #3F3F3F; color: #eee;  "></textarea>
+								
+								
+
+
+
+    <script>
+		// controllo l'evento tasto TAB 
+        document.getElementById('elm_textarea').addEventListener('keydown', function(e) {
+            if (e.key === 'Tab') { // Controlla se il tasto premuto è il Tab
+                e.preventDefault(); // Previene il comportamento predefinito (spostarsi al controllo successivo)
+
+                // Inserisce un carattere di tabulazione dove si trova il cursore
+                const start = this.selectionStart;
+                const end = this.selectionEnd;
+                this.value = this.value.substring(0, start) + '\t' + this.value.substring(end);
+
+                // Sposta il cursore dopo il carattere di tabulazione inserito
+                this.selectionStart = this.selectionEnd = start + 1;
+            }
+        });
+    </script>
+	
+	
+								
+			</div>
+		</div>
+		
+	</div>
+	<div class="w3-col s3 " style="background: #4F4F4F; ">	
+		<div id="" class="" style="height:50vh; border-left:2px solid #F0E68C; ">
+			
+			<div id="" class="w3-large w3-center w3-khaki" style="">trattamenti</div>
+			<div id="" class="" style="height: 46vh; overflow:auto;">
+			
+			
+			
+			
+			
+			
+<div class="w3-row" style=" margin: 0.5em; "><div class="w3-col" style="width:76px"><button type="button" class="w3-button w3-large w3-light-grey w3-round"  onclick="ahk.btn_trattamenti(event,'101')">101</button></div>
+<div class="w3-rest w3-text-white"> excel 2 jsmtx<br><span class="w3-small">adatta verso matrice javascript</span></div>
+</div>
+
+
+<div class="w3-row" style=" margin: 0.5em; "><div class="w3-col" style="width:76px"><button type="button" class="w3-button w3-large w3-light-grey w3-round"  onclick="ahk.btn_trattamenti(event,'102')">102</button></div>
+<div class="w3-rest w3-text-white"> excel to js 2<br><span class="w3-small"></span></div>
+</div>
+
+
+<div class="w3-row" style=" margin: 0.5em; "><div class="w3-col" style="width:76px"><button type="button" class="w3-button w3-large w3-light-grey w3-round"  onclick="ahk.btn_trattamenti(event,'103')">103</button></div>
+<div class="w3-rest w3-text-white"> slashes 1<br><span class="w3-small"></span></div>
+</div>
+
+
+<div class="w3-row" style=" margin: 0.5em; "><div class="w3-col" style="width:76px"><button type="button" class="w3-button w3-large w3-light-grey w3-round"  onclick="ahk.btn_trattamenti(event,'104')">104</button></div>
+<div class="w3-rest w3-text-white"> slashes 2<br><span class="w3-small"></span></div>
+</div>
+
+
+<div class="w3-row" style=" margin: 0.5em; "><div class="w3-col" style="width:76px"><button type="button" class="w3-button w3-large w3-light-grey w3-round"  onclick="ahk.btn_trattamenti(event,'105')">105</button></div>
+<div class="w3-rest w3-text-white"> >< in sterlina<br><span class="w3-small"></span></div>
+</div>
+
+
+<div class="w3-row" style=" margin: 0.5em; "><div class="w3-col" style="width:76px"><button type="button" class="w3-button w3-large w3-light-grey w3-round"  onclick="ahk.btn_trattamenti(event,'106')">106</button></div>
+<div class="w3-rest w3-text-white"> in riga js<br><span class="w3-small"></span></div>
+</div>
+
+
+<div class="w3-row" style=" margin: 0.5em; "><div class="w3-col" style="width:76px"><button type="button" class="w3-button w3-large w3-light-grey w3-round"  onclick="ahk.btn_trattamenti(event,'107')">107</button></div>
+<div class="w3-rest w3-text-white"> b-a virgolette<br><span class="w3-small"></span></div>
+</div>
+
+
+<div class="w3-row" style=" margin: 0.5em; "><div class="w3-col" style="width:76px"><button type="button" class="w3-button w3-large w3-light-grey w3-round"  onclick="ahk.btn_trattamenti(event,'108')">108</button></div>
+<div class="w3-rest w3-text-white"> whisper files 1<br><span class="w3-small"></span></div>
+</div>
+
+
+<div class="w3-row" style=" margin: 0.5em; "><div class="w3-col" style="width:76px"><button type="button" class="w3-button w3-large w3-light-grey w3-round"  onclick="ahk.btn_trattamenti(event,'109')">109</button></div>
+<div class="w3-rest w3-text-white"> sost doppio accapo con accapo<br><span class="w3-small"></span></div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+		</div>
+		
+		<div id="" class="" style="height:45vh; border-left: 2px solid orange;">
+			
+			<div id="" class="w3-large w3-center w3-orange" style="">gestione</div>
+			
+			<button type="button" class="w3-button w3-large w3-light-grey w3-round w3-right w3-margin" onclick="ahk.btn_pannello_stringhe_34(event)">COPY TO CLIPBOARD</button>
+			<br>
+		
+			<button type="button" class="w3-button w3-large w3-light-grey w3-round " style="margin: 0.5em; margin-top: 10vh;" onclick="ahk.btn_pannello_stringhe_11(event); document.getElementById('elm_textarea').focus();">X CLEAR</button>
+			<br>
+		
+			<button type="button" class="w3-button w3-large w3-light-grey w3-round " style="margin: 0.5em; margin-top: 3vh;" onclick="ahk.btn_pannello_stringhe_31(event); document.getElementById('elm_textarea').focus();"><- PASTE</button>
+			
+		</div>		
+  
+	</div>
+</div>  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+<div id="" class="w3-container" style=" position: fixed; left: 0px; bottom: 0px; margin:0px;padding:0px; background: #4F4F4F; width: 74vw ; " >
+
+	<!--  taglia e sostituisci -->  
+
+<div class="w3-row-padding">
+
+  <div class="w3-col" style="width:40vh">
+    <input id="elm_sost_cerca" class="w3-input w3-border w3-large" type="text" placeholder="">
+  </div>
+
+  <div class="w3-col" style="width: 25vh">
+    <button type="button" class="w3-button w3-large w3-red w3-round " style="" onclick="ahk.btn_pannello_stringhe_21(event)">TOGLI</button>
+  </div>
+
+  <div class="w3-col" style="width:40vh">
+    <input id="elm_sost_con" class="w3-input w3-border w3-large" type="text" placeholder="">
+  </div>
+
+  <div class="w3-col" style="width:5vh">
+    <button type="button" class="w3-button w3-large w3-blue w3-round " style="" onclick="ahk.btn_pannello_stringhe_22(event)">SOSTITUISCI CON</button>
+  </div>
+
+
+  <div class="w3-rest">
+    <br>
+  </div>
+
+
+</div>
+
+
+
+  
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+			  
+</body>
+</html>
