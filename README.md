@@ -9,3 +9,9 @@ Spesso mi sono trovato a dover modificare singoli caratteri ripetuti nel codice,
 
 This application, activated with the Windows + 0 key combination (on the numpad), opens a panel for string manipulation.
 I often found myself needing to edit repeated single characters in code, or pasting data from Excel and quickly replacing certain symbols. Over time, I gathered many rules and experiences, which I’ve now collected and integrated into this tool.
+
+
+-----------------------------------------
+![250514_150623 snap](https://github.com/user-attachments/assets/e36be1d7-a3f5-4ba9-a1e8-e88766b55cdb)
+
+aggiunto pagina di ricerca
