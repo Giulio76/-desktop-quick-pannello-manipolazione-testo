@@ -10,15 +10,16 @@
 <link rel="stylesheet" href="include/w3.css">
 <link rel="stylesheet" href="include/w3-colors-2021.css">
 <link rel="stylesheet" href="include/w3-colors-2020.css">
-<script src="include/w3.js"></script>
+<!--  niente w3.js perche neutron non lo riconosce, dovrei lavorarci ma per adesso provo altrre soluzioni -->
+
 
 <script>
 const mtxA = [ 
 
-
+"a","b","c","d","e","f","g","h","i"
 
 ];
-//togli l'ultima virgola
+
 // ["","","",""]
 // ["","test","1000000000000","2025_01_01_00_00_00"]
 </script>
@@ -31,6 +32,7 @@ const mtxA = [
 	height: 100%;
 	background-color: #3F3F3F;
 	margin:0px;padding:0px; 
+	overflow:hidden;
 
 	}
 
@@ -130,6 +132,17 @@ const mtxA = [
 <button type="button" class="w3-button w3-light-grey w3-round" style="margin:0px;padding:2px; width: 100% ; margin-top: 0.5em; 	" onclick="ahk.btn_sostutisci_indicati(event, 'tab', 'virgola')">tab 2 virg</button>			  
 </div>
 
+
+<div class="w3-cell" style="margin:0px;padding:2px; ">
+<button type="button" class="w3-button w3-light-grey w3-round" style="margin:0px;padding:2px; width: 100% ; 					" onclick="ahk.btn_sostutisci_indicati(event, 'space', 'tab')">space to tab</button><br>
+<button type="button" class="w3-button w3-light-grey w3-round" style="margin:0px;padding:2px; width: 100% ; margin-top: 0.5em; 	" onclick="ahk.btn_sostutisci_indicati(event, 'tab', 'space')">tab 2 space</button>			  
+</div>
+
+
+
+
+
+
 <!--  separatore -->
 <div class="w3-cell" style="margin:0px;padding:2px; width: 3em;"><br></div>
 
@@ -150,17 +163,20 @@ const mtxA = [
 </div>
 
 
+
+
+
 <!--  separatore -->
 <div class="w3-cell" style="margin:0px;padding:2px; width: 3em;"><br></div>
 
 
 <div class="w3-cell " style="margin:0px;padding:2px; ">
-<button type="button" class="w3-button w3-light-grey w3-round" style="margin:0px;padding:2px; width: 100% ; 					" onclick="ahk.btn_sostutisci_indicati(event, 'virg_8221', 'virgolette')">virg 8221 to virg</button><br>
-<button type="button" class="w3-button w3-light-grey w3-round" style="margin:0px;padding:2px; width: 100% ; margin-top: 0.5em; 	" onclick="ahk.btn_sostutisci_indicati(event, 'virg_8220', 'virgolette')">virg 8220 to virg</button>			  
+<button type="button" class="w3-button w3-light-grey w3-round" style="margin:0px;padding:2px; width: 100% ; 					font-size: 0.7em; " onclick="ahk.btn_sostutisci_indicati(event, 'virg_8221', 'virgolette')">virg 8221 to virg</button><br>
+<button type="button" class="w3-button w3-light-grey w3-round" style="margin:0px;padding:2px; width: 100% ; margin-top: 0.5em; 	font-size: 0.7em; " onclick="ahk.btn_sostutisci_indicati(event, 'virg_8220', 'virgolette')">virg 8220 to virg</button>			  
 </div>
 
 <div class="w3-cell " style="margin:0px;padding:2px; ">
-<button type="button" class="w3-button w3-light-grey w3-round" style="margin:0px;padding:2px; width: 100% ; 					" onclick="ahk.btn_sostutisci_indicati(event, 'apice_8217', 'apice')">apice 8217 to apice</button><br>
+<button type="button" class="w3-button w3-light-grey w3-round" style="margin:0px;padding:2px; width: 100% ; 					font-size: 0.7em; " onclick="ahk.btn_sostutisci_indicati(event, 'apice_8217', 'apice')">apice 8217 to apice</button><br>
 <!--  
 <button type="button" class="w3-button w3-light-grey w3-round" style="margin:0px;padding:2px; width: 100% ; margin-top: 0.5em; 	" onclick="ahk.btn_sostutisci_indicati(event, '', '')"></button>			  
  -->
@@ -191,7 +207,15 @@ const mtxA = [
 			
 			  <textarea id="elm_textarea"  class="" autofocus 
 						style="font-size: 1.2em; padding:4px; width: 100% ; height: 78vh ; border:1px solid #888;
-								font-family: consolas; background-color: #3F3F3F; color: #eee;  "></textarea>
+								font-family: consolas; background-color: #3F3F3F; color: #eee;  ">a
+b
+c
+d
+e
+f
+g
+h
+i</textarea>
 								
 								
 
@@ -287,26 +311,35 @@ const mtxA = [
 
 		</div>
 		
-		<div id="" class="" style="height:45vh; border-left: 2px solid orange;">
+		<div id="" class="" style="height:45vh; border-left: 2px solid orange; background: #4F4F4F; ">
 			
 			<div id="" class="w3-large w3-center w3-orange" style="">gestione</div>
 			
 			<button type="button" class="w3-button w3-large w3-light-grey w3-round w3-right w3-margin" onclick="ahk.btn_pannello_stringhe_34(event)">COPY TO CLIPBOARD</button>
 			<br>
 		
-			<button type="button" class="w3-button w3-large w3-light-grey w3-round " style="margin: 0.5em; margin-top: 10vh;" onclick="ahk.btn_pannello_stringhe_11(event); document.getElementById('elm_textarea').focus();">X CLEAR</button>
+			<button type="button" class="w3-button w3-large w3-light-grey w3-round " style="margin: 0.5em; margin-top: 8vh;" onclick="ahk.btn_pannello_stringhe_11(event); document.getElementById('elm_textarea').focus();">X CLEAR</button>
 			<br>
 		
-			<button type="button" class="w3-button w3-large w3-light-grey w3-round " style="margin: 0.5em; margin-top: 3vh;" onclick="ahk.btn_pannello_stringhe_31(event); document.getElementById('elm_textarea').focus();"><- PASTE</button>
+			<button type="button" class="w3-button w3-large w3-light-grey w3-round " style="margin: 0.5em; margin-top: 2vh;" onclick="ahk.btn_pannello_stringhe_31(event); document.getElementById('elm_textarea').focus();"><- PASTE</button>
+			<br>
+			
+			<button type="button" class="w3-button w3-large w3-light-grey w3-round w3-right w3-margin" onclick="ahk.btn_pannello_stringhe_35(event)">SAVE</button>
+			<br>
+			
+			<button type="button" class="w3-button w3-large w3-light-grey w3-round " style="margin: 0.5em; margin-top: 2vh;"
+			 onclick="
+					document.getElementById('ctn_modal_cerca').style.display='block'; 
+					filtraTriplo(); 
+					document.getElementById('chiave1').focus();
+					" >apri modale cerca</button>
 			
 		</div>		
   
 	</div>
 </div>  
   
-  
-  
-  
+
   
   
   
@@ -356,6 +389,190 @@ const mtxA = [
 
 
 
+
+
+
+
+
+<!--  MODALETTO CERCA -->
+
+
+
+  <div id="ctn_modal_cerca" class="w3-modal" style="margin:0px;padding:0px;  overflow:hidden; display:none; ">
+    <div class="w3-modal-content" style="margin:0px;padding:0px; margin-top: 5vh; margin-left:0.5vw ; width: 99vw; height:93.5vh;">
+      <header class="w3-container w3-brown" style="margin:0px;padding:0px; "> 
+        <span onclick="document.getElementById('ctn_modal_cerca').style.display='none'" 
+        class="w3-button w3-display-topright w3-large w3-red">&times;</span>
+        <div id="" class="w3-xlarge" style="padding: 0.17em; "> cerca</div>
+      </header>
+      <div class="w3-display-container w3-black" style=" height: 88vh; background-color: #3F3F3F;">
+		<div class="w3-display-topleft " style=" width: 100% ;">
+		
+		
+		<!--  barra ricerca -->
+		<div class="w3-row">
+		  
+			<div class="w3-container w3-quarter w3-dark-grey" style="border:2px solid brown; margin:4px;padding:4px; border-radius: 8px;">
+				<button type="button" class="w3-button w3-right w3-red w3-small" style="border-radius: 5px; margin:0px;padding:3px; margin-top: 0.5em;  "
+					onclick="document.getElementById('chiave1').value = '' ; filtraTriplo(); ">&times; clear</button>
+				<label>chiave di ricerca 1 (include)</label><br>
+				<input type="text" id="chiave1" placeholder="Filtro 1 (include)" onInput="filtraTriplo();" class="w3-input w3-xlarge" style="width: 100% ; margin-top: 0.5em; border:0px solid black; padding: 2px; " >
+			</div>
+
+			<div class="w3-container w3-quarter w3-dark-grey" style="border:2px solid brown; margin:4px;padding:4px; border-radius: 8px;">
+				<button type="button" class="w3-button w3-right w3-red w3-small" style="border-radius: 5px; margin:0px;padding:3px; margin-top: 0.5em;  "
+					onclick="document.getElementById('chiave2').value = '' ;  filtraTriplo();">&times; clear</button>
+				<label>chiave di ricerca 2 (raffina)</label><br>
+				<input type="text" id="chiave2" placeholder="Filtro 2 (raffina)" onInput="filtraTriplo();" class="w3-input w3-xlarge" style="width: 100% ; margin-top: 0.5em; border:0px solid black; padding: 2px; " >
+			</div>
+
+			<div class="w3-container w3-quarter w3-dark-grey" style="border:2px solid brown; margin:4px;padding:4px; border-radius: 8px;">
+				<button type="button" class="w3-button w3-right w3-red w3-small" style="border-radius: 5px; margin:0px;padding:3px; margin-top: 0.5em;  "
+					onclick="document.getElementById('escludi').value = '' ; filtraTriplo(); ">&times; clear</button>
+				<label>chiave di ricerca 3 (escludi)</label><br>
+				<input type="text" id="escludi" placeholder="Filtro 3 (escludi)" onInput="filtraTriplo();" class="w3-input w3-xlarge" style="width: 100% ; margin-top: 0.5em; border:0px solid black; padding: 2px; " >
+			</div>
+
+			<div class="w3-container w3-rest w3-dark-grey" style="border:2px solid brown; margin:4px;padding:4px; border-radius: 8px;">
+			<div id="" class="w3-large" style="">cerca</div>
+			<button 
+					onclick="
+								document.getElementById('chiave1').value = '' ; 
+								document.getElementById('chiave2').value = '' ; 
+								document.getElementById('escludi').value = '' ; 
+								filtraTriplo();
+								" 
+					class="w3-button w3-right w3-orange w3-medium w3-round" >clear</button>
+			</div>
+			
+		</div>
+
+
+	
+
+	<textarea id="risultato" class="w3-black" style="margin: 0.5em; margin-top: 0;  width: 99.5% ; height:70vh; overflow:auto; padding-bottom: 20vh; border:0px solid black; " ></textarea> 
+	
+
+	<script>
+	let arrA = []; // Variabile globale
+	let arrB = [];
+
+	function filtraTriplo() {
+	  const testo = document.getElementById("elm_textarea").value;
+	  const chiave1 = document.getElementById("chiave1").value.trim().toLowerCase();
+	  const chiave2 = document.getElementById("chiave2").value.trim().toLowerCase();
+	  const chiaveEscludi = document.getElementById("escludi").value.trim().toLowerCase();
+
+	  //righeFinali = testo
+		//.split(/\r?\n/)
+		//.map(r => r.replace(/^\s+|\s+$/g, ''))
+		//.filter(r => r !== "");
+		
+		arrB = []; //reset
+		arrA = []; //reset
+		arrA = testo.split("\n");		
+		//creo la matrice dall'array
+		for (let i = 0; i < arrA.length; i++) {
+			arrB.push( [ arrA[i] , '1' ] ) ;
+		}		
+		arrA = []; //reset
+
+		if (chiave1 !== "") {
+			// sintassi moderna non gli piace;;  righeFinali = righeFinali.filter(r => r.toLowerCase().includes(chiave1));
+			for (let i = 0; i < arrB.length; i++) {
+				let intP = arrB[i][0].toLowerCase().indexOf(chiave1);
+				arrB[i][1] = '1';
+				if ( intP == '-1' ) { arrB[i][1] = '0'; }
+				//console.log( intP );
+			} 
+		}
+
+		if (chiave2 !== "") {
+			//righeFinali = righeFinali.filter(r => r.toLowerCase().includes(chiave2));
+			for (let i = 0; i < arrB.length; i++) {
+				if (arrB[i][1] == '1' ){
+					let intP = arrB[i][0].toLowerCase().indexOf(chiave2);
+					arrB[i][1] = '1';
+					if ( intP == '-1' ) { arrB[i][1] = '0'; }
+				}
+			} 			
+		}
+
+		if (chiaveEscludi !== "") {
+			//righeFinali = righeFinali.filter(r => !r.toLowerCase().includes(chiaveEscludi));
+			for (let i = 0; i < arrB.length; i++) {
+				if (arrB[i][1] == '1' ){
+					let intP = arrB[i][0].toLowerCase().indexOf(chiaveEscludi);
+					arrB[i][1] = '0';
+					if ( intP == '-1' ) { arrB[i][1] = '1'; }
+				}
+			} 				
+		}
+
+			//righeFinali.sort((a, b) => a.localeCompare(b));
+		let counterA = 0;
+		let strA = '';
+		for (let i = 0; i < arrB.length; i++) {
+			if (arrB[i][1] == '1' ){
+				strA += arrB[i][0] + '\n' ;
+				counterA +=1;
+			}
+		} 
+		
+		//console.log( strA );
+		
+		document.getElementById('ctn_cerca_bottom_label_1').innerHTML = '&nbsp;' + counterA + ' elementi'; 
+		
+		document.getElementById("risultato").innerHTML = strA ;
+		strA = '';
+
+		
+		//righeFinali.length > 0
+		//  ? righeFinali.map(r => `<div>${r}</div>`).join("")
+		//  : "<em>Nessuna riga trovata.</em>";
+
+		//ok console.log( arrB );
+		
+	}
+	</script>
+
+
+
+
+
+		
+		</div>
+		<div class="w3-display-bottomleft w3-dark-grey" style=" width: 100% ;">
+		
+			<button onclick="scriviInTextarea()" class="w3-button w3-right w3-orange w3-large w3-round" >sostituisci al testo inziale</button>
+
+			<script>
+			function scriviInTextarea() {
+			  const textarea = document.getElementById("elm_textarea");
+
+			  if (arrB.length > 0) {
+				let strA ='';
+				for (let i = 0; i < arrB.length; i++) {
+					if (arrB[i][1] == '1' ){
+						strA += arrB[i][0] + "\n" ;
+					}
+				} 			  
+				textarea.value = strA; 
+			  } else {
+				alert("Non c'è nulla da scrivere. Assicurati di avere dei risultati prima.");
+			  }
+			  
+			  //nascondi modale
+			  document.getElementById('ctn_modal_cerca').style.display='none';
+			}
+			</script>
+		
+			<div id="ctn_cerca_bottom_label_1" class="w3-xlarge" style=""> Bottom Left</div>
+			
+		</div>
+      </div>
+    </div>
+  </div>
 
 
 

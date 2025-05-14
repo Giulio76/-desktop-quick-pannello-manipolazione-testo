@@ -20,8 +20,7 @@ if false {
 	FileInstall "(desktop) quick pannello manipolazione testo - html.html", "*"
 	FileInstall "include/w3.css", "*"   
     FileInstall "include/w3-colors-2021.css", "*"
-    FileInstall "include/w3-colors-2020.css", "*"
-    FileInstall "include/w3.js", "*"
+    FileInstall "include/w3-colors-2020.css", "*"    
 
 }
 
@@ -35,7 +34,7 @@ WinMove (200)/2, A_ScreenHeight-800-50, A_ScreenWidth-200, 800, "ahk_id " active
 ;WinSetStyle "-0xC00000", "ahk_id " active_id
 ;WinSetRegion "15-0 495-0 510-15 510-615 495-630 15-630 0-615 0-15" , "ahk_id " active_id
 ;;WinSetAlwaysOnTop 1, "ahk_id " active_id
-WinHide "ahk_id " active_id
+;WinHide "ahk_id " active_id
 
 
 
@@ -104,6 +103,20 @@ btn_pannello_stringhe_34(neutron, event) {
 ;copy 2 clipboard
     A_Clipboard := neutron.qs("#elm_textarea").value 
 }
+
+
+btn_pannello_stringhe_35(neutron, event) {
+;save
+    A_Clipboard := neutron.qs("#elm_textarea").value
+    
+    strT := data_ora_adesso()
+    
+    FileAppend A_Clipboard , A_Desktop "\" strT ".txt"
+    
+    WinHide "ahk_id " active_id 
+}
+
+
 
 
 ;;trova e sostituisci stringhe
